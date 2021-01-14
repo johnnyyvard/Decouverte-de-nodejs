@@ -4,6 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,7 +17,8 @@
     "url": "https://github.com/johnnyyvard/Decouverte-de-nodejs/issues"
   },
   "homepage": "https://github.com/johnnyyvard/Decouverte-de-nodejs#readme",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "dotenv": "^8.2.0"
   }
 }
