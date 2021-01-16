@@ -9,6 +9,10 @@
 
 // console.log('bonjour' + name);
 
-const exemple = require('./events/limite-callbacks_exemple');
+// const exemple = require('./events/limite-callbacks_exemple');
+// exemple.timer(undefined, undefined, () => console.log('3 secondes écoulées.'));
 
-exemple.timer(undefined, undefined, () => console.log('3 secondes écoulées.'));
+const exemple = require('./events/eventEmitter_exemple');
+
+exemple.timer.on('3_secondes', () => console.log('3 secondes écoulées.'));
+exemple.launchTimer();
