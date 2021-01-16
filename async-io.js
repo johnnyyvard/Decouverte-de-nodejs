@@ -36,7 +36,7 @@ function generateData() {
 }
 
 function callback() {
-    console.log('Process \'bigfile\' treminé, durée ' + (Date.now() - date) + ' ms.')
+    console.log('Process \'bigfile\' terminé, durée ' + (Date.now() - date) + ' ms.')
 }
 
 fs.writeFile('bigfile', generateData(), callback)
