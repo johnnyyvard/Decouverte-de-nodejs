@@ -15,7 +15,7 @@ class GenerateDataStream extends stream.Readable {
         else {
             const string = ' ' + Math.random() * 10;
             const buffer = Buffer.from(string);
-            this.push(buffer); 
+            this.push(buffer);
         }
     }
 }
