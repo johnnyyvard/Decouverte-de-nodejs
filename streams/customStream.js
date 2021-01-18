@@ -20,7 +20,7 @@ class GenerateDataStream extends stream.Readable {
     }
 }
 
-const dataStream = new GenerateDataStream(40000000);
+const dataStream = new GenerateDataStream(400000);
 const writeStream = fs.createWriteStream('../bigfile');
 
 dataStream.pipe(writeStream);
