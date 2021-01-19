@@ -17,17 +17,21 @@
 // exemple.timer.on('3_secondes', () => console.log('3 secondes écoulées.'));
 // exemple.launchTimer();
 
-const url = require('url');
+// const url = require('url');
+require('dotenv').config();
 const express = require('express');
 const app = express();
-const mongoClient = require('mongodb');
+// const mongoClient = require('mongodb');
+const mongoose = require('mongoose');
 
 require('./router').initRouter(app);
 
-mongoClient.connect(
-    "mongodb://localhost/test",
-    {useUnifiedTopology: true},
-    require('./handlers/mongoDb').connection
-)
+mongoose.connect(process.env.mongoDb, {useNewUrlParser: true, useUnifiedTopology: true});
+
+// mongoClient.connect(
+//     // "mongodb://localhost/test",
+//     {useUnifiedTopology: true},
+//     require('./handlers/mongoDb').connection
+// )
 
 app.listen(8000);
