@@ -18,13 +18,16 @@
 // exemple.launchTimer();
 
 // const url = require('url');
-require('dotenv').config();
+require('dotenv').config()
 const express = require('express');
 const app = express();
 // const mongoClient = require('mongodb');
 const mongoose = require('mongoose');
 
 require('./router').initRouter(app);
+
+const userRepo = require('./repository/user');
+userRepo.saveUser();
 
 mongoose.connect(process.env.mongoDb, {useNewUrlParser: true, useUnifiedTopology: true});
 

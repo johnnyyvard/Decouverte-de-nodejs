@@ -7,7 +7,7 @@ function saveUser() {
 }
 
 function getUsers() {
-    return User.find((err, data) => console.log(data));
+    return User.find().stream();    // Nb: cas où pas d'utilisateur à gérer
 }
 
 function deleteAllUsers() {
