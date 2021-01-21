@@ -11,7 +11,7 @@
 
 function beforeExitCallback(code) {
     console.log('About to exit with code ' + code);
-    setTimeout( () => console.log('Last async action.'), 1000);
+    setTimeout(() => console.log('Last async action.'), 1000);
 }
 
 process.on("beforeExit", beforeExitCallback);
