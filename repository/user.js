@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const User =  mongoose.model('User', { name: String });
+const User = mongoose.model('User', { name: String });
 
 function saveUser() {
     const user = new User({ name: 'Elise' });
